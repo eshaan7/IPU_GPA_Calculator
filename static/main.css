@@ -40,13 +40,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .badge {
+  font-size: 10px;
   height: 1rem !important;
-  width: 1rem;
 }
 
 .form-control-number {
   width: 4rem;
-
 }
 
 /* FOOTER */

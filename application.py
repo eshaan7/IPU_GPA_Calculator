@@ -5,7 +5,7 @@ app.secret_key = "66b58fafa6a470f26fd2adc9de14cef2"
 
 @app.route('/', methods=['GET','POST'])
 def index():
-	no_of_subjects = 8
+	no_of_subjects = 14
 	if request.method == 'POST':
 		credits = [ int (i) for i in request.form.getlist('credits[]') ]
 		grades = request.form.getlist('grades[]')
