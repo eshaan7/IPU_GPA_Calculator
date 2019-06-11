@@ -4,15 +4,16 @@
         <div class="content-section">
             <form action="{{ url_for('index') }}" method="POST">
                 <h3 class="border-top border-bottom">Credit - Grade</h3>
-                <div class="alert alert-info">Note: Please select 0 credits for surplus subjects</div>
+                <div class="alert alert-info col-xs">Note: Please select 0 credits for surplus subjects</div>
                 {% for i in range(no_of_subjects) %}
                   <div class="inline">
-                    <span class="badge badge-dark">{{ i+1 }}</span><fieldset>
+                    <span class="badge badge-dark">{{ i+1 }}</span>
+                    <fieldset class="col-sm-1">
                       <div class="form-group">
                         <input class="form-control form-control-number form-control-sm" name="credits[]" value="1" placeholder="1" type="number">
                       </div>
                     </fieldset>
-                    <strong>--</strong>
+                    <strong>-</strong>
                     <fieldset> 
                       <div class="form-group">
                         <select class="form-control form-control-sm" name="grades[]">
