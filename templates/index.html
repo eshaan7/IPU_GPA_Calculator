@@ -8,7 +8,7 @@
                 {% for i in range(no_of_subjects) %}
                   <div class="inline">
                     <span class="badge badge-dark">{{ i+1 }}</span>
-                    <fieldset class="col-sm-1">
+                    <fieldset>
                       <div class="form-group">
                         <input class="form-control form-control-number form-control-sm" name="credits[]" value="1" placeholder="1" type="number">
                       </div>
@@ -24,13 +24,13 @@
                             <option value="B">B</option>
                             <option value="C">C</option>
                             <option value="P">P</option>
-                        </select> <br/>
+                        </select>
                        </div>
                     </fieldset>
                   </div>
                 {% endfor %}
-         
-                <button class="btn btn-dark mb-2" id="submit">Calculate</button>
+                <div class="row">
+                <button class="rowbtn btn-dark mb-2" id="submit">Calculate</button></div>
             </form>
             {% if FinalGPA %}
             <div class="alert alert-info mb-3" role="alert">
