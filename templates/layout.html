@@ -1,9 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
+	<!-- "Metadata. The story behind the data" ~ Elliot Alderson -->
+  	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+  	<meta name="description" content="GGSIPU GPA/Grade Calculator">
+  <meta name="keywords" content="GGSIPU, IPU, grade, cgpa, Eshaan Bansal, gpa, gpa calculator">
+  	<meta property="og:description" content="GGSIPU GPA/Grade Calculator">
+  	<meta property="og:title" content="IPU GPA Calculator">
+  	<meta property="og:type" content="website">
+  	<!-- Favicon -->
+  	<link rel='shortcut icon' type='image/x-icon' href="{{ url_for('static', filename='favicon.ico') }}"/>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Font Awesome -->
@@ -17,6 +25,7 @@
     <header class="site-header">
       <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
         <div class="container">
+          <img src="static/favicon.ico" id="logo"/>
           <a class="navbar-brand mr-4" href="/">IPU GPA Calculator</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
