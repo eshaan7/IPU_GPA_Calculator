@@ -19,7 +19,7 @@ if('serviceWorker' in navigator) {
 // For Add To Home Screen (A2HS) button and prompt
 // Chrome Only for now
 
-const btnAdd = document.querySelector('#btnAdd');
+const btnAdd = document.getElementById('btnAdd');
 btnAdd.style.display = 'none';
 let deferredPrompt;
 
