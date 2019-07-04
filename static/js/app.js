@@ -25,7 +25,7 @@ let deferredPrompt;
 
 window.addEventListener('beforeinstallprompt', (e) => {
   console.log('beforeinstallprompt event fired');
-  e.preventDefault();
+  //e.preventDefault();
   deferredPrompt = e;
   btnAdd.style.display = 'block';
 });
