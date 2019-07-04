@@ -14,6 +14,10 @@ if 'DYNO' in os.environ:
 def sw():
     return app.send_static_file('sw.js')
 
+@app.route('/offline.html')
+def offline():
+return app.send_static_file('offline.html')
+
 ''' Routes/views ''' 
 
 @app.route('/', methods=['GET','POST'])
