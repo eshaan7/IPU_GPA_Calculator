@@ -8,8 +8,9 @@
   "orientation": "portrait",
   "scope": "/",
   "start_url": "/",
-"icons": [
-	{
+  "prefer_related_applications": true,
+  "icons": [
+	  {
       "src": "images/icons/icon-36x36.png",
       "sizes": "36x36",
       "type": "image/png"
