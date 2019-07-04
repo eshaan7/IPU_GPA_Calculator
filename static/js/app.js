@@ -14,7 +14,7 @@ if('serviceWorker' in navigator) {
         console.log('Service Worker Ready');
       });
     });
-  }
+}
 
 // For Add To Home Screen (A2HS) button and prompt
 // Chrome Only for now
