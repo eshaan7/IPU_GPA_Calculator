@@ -16,7 +16,7 @@ def sw():
 
 @app.route('/offline.html')
 def offline():
-return app.send_static_file('offline.html')
+	return app.send_static_file('offline.html')
 
 ''' Routes/views ''' 
 
