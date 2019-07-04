@@ -1,31 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<!-- "Metadata. The story behind the data" ~ Elliot Alderson -->
-  	<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-  	<meta name="description" content="GGSIPU GPA/Grade Calculator">
-  <meta name="keywords" content="GGSIPU, IPU, grade, cgpa, Eshaan Bansal, gpa, gpa calculator">
-  	<meta property="og:description" content="GGSIPU GPA/Grade Calculator">
-  	<meta property="og:title" content="IPU GPA Calculator">
-  	<meta property="og:type" content="website">
-  	<!-- Favicon -->
-  	<link rel='shortcut icon' type='image/x-icon' href="{{ url_for('static', filename='favicon.ico') }}"/>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-    <!-- local css -->
- 	  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}"/>
-    {% block head %}{% endblock %}
-    <title>IPU GPA Calculator</title>
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block body %}
+
+    <!-- Header -->
     <header class="site-header">
       <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
         <div class="container">
-          <img src="static/favicon.ico" id="logo"/>
+          <img src="static/images/favicon.ico" id="logo"/>
           <a class="navbar-brand mr-4" href="/">IPU GPA Calculator</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -41,6 +22,8 @@
         </div>
       </nav>
     </header>
+
+    <!-- Main -->
     <main role="main" class="container">
       <div class="row">
         <div class="col-md-8">
@@ -59,7 +42,7 @@
           <div class="content-section">
             <h4 class='text-muted'>Show Support &hearts;</h4>
             <hr/>
-            <h6 class='text-muted'>Open-Source Web App in Flask</h6>
+            <h6 class='text-muted'>Open-Source Progressive Web App in Flask</h6>
               <ul class="list-group">
                 <li class="list-group-item list-group-item-light"><a class='text-muted' href="https://github.com/Eshaan7/IPU_GPA_Calculator" target="_blank">Github</a></li>
                 <li class="list-group-item list-group-item-light"><a class='text-muted' href="https://github.com/Eshaan7/IPU_GPA_Calculator/deployments" target="_blank">Heroku</a></li>
@@ -69,6 +52,8 @@
         </div>
       </div>
     </main>
+
+
     <!-- Footer -->
     <footer>
       <!-- Footer Elements -->
@@ -93,5 +78,6 @@
       <!-- /Footer Elements -->
     </footer>
     <!-- /Footer -->
-</body>
-</html>
+
+{% endblock %}
+

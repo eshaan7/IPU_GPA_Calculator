@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- PWA -->
+	  <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}">
+	<!-- "Metadata. The story behind the data" ~ Elliot Alderson -->
+  	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+  	<meta name="description" content="GGSIPU GPA/Grade Calculator">
+    <meta name="keywords" content="GGSIPU, IPU, grade, cgpa, Eshaan Bansal, gpa, gpa calculator">
+  	<meta property="og:description" content="GGSIPU GPA/Grade Calculator">
+  	<meta property="og:title" content="IPU GPA Calculator">
+  	<meta property="og:type" content="website">
+  <!-- Favicon -->
+  	<link rel='shortcut icon' type='image/x-icon' href="{{ url_for('static', filename='images/favicon.ico') }}"/>
+  <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+  <!-- local css -->
+ 	  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}"/>
+    {% block head %}{% endblock %}
+  <!-- Title -->
+    <title>IPU GPA Calculator</title>
+</head>
+
+<body>
+   
+    {% block body %} {% endblock %}
+    <!-- PWA stuff -->	
+   <script type="text/javascript" src="{{ url_for('static', filename='js/app.js') }}"></script>
+   <script type="text/javascript">
+       if (!navigator.serviceWorker.controller) {
+           navigator.serviceWorker.register("/sw.js").then(function(reg) {
+               console.log("Service worker has been registered for scope: " + reg.scope);
+           });
+       }
+  </script>
+
+</body>
+
+</html>
