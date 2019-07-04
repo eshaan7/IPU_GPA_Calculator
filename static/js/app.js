@@ -1,5 +1,6 @@
-(function() {
-  if('serviceWorker' in navigator) {
+// Register Service Worker
+
+if('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
       navigator.serviceWorker.register('../sw.js')
                .then(function(registration) {
@@ -14,21 +15,23 @@
       });
     });
   }
-})();
+
+// For Add To Home Screen (A2HS) button and prompt
+// Chrome Only for now
 
 const btnAdd = document.querySelector('#btnAdd');
-
+btnAdd.style.display = 'none';
 let deferredPrompt;
 
 window.addEventListener('beforeinstallprompt', (e) => {
   console.log('beforeinstallprompt event fired');
   e.preventDefault();
   deferredPrompt = e;
-  btnAdd.style.visibility = 'visible';
+  btnAdd.style.display = 'block';
 });
 
 btnAdd.addEventListener('click', (e) => {
-  btnAdd.style.visibility = 'hidden';
+  btnAdd.style.display = 'none';
   deferredPrompt.prompt();
   deferredPrompt.userChoice
     .then((choiceResult) => {
